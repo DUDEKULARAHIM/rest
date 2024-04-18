@@ -1,0 +1,125 @@
+<!doctype html>
+<html> 
+<head>
+<title> Create new account </title>
+</head>
+<style>
+body{background-image:url("menu21.webp")}
+#a{text-decoration:none;}
+#a:hover{color:red}
+.field{ border-radius:20px;width:500px;height:auto;background-color:none;padding:20px 60px 20px 120px}
+
+.login{margin-left:120px;
+margin-right:850px;
+margin-top:0px;
+margin-bottom:50px;}
+.user{ width:320px;
+height:40px;border-radius:10px}
+
+
+.password{width:325px;
+height:40px;border-radius:10px}
+#u{font-size:22px}
+#p{font-size:22px}
+#l{color:red;font-size:45px;}
+.submit{width:180px ;height:60px;border-radius:15px;background-color:lightblue;color:black;font-size:22px}
+.submit:hover{color:red}
+.login:hover{color:lightblue}
+#n{font-size:80px;font-family:algerian;text-align:center}
+nav{display:flex;background-color:none;margin-left:400px}
+nav a{text-decoration:none;padding:10px 34px;color:lightgray;font-size:18px}
+nav a:hover{background-color:cadetblue}
+input.user:hover{width:330px}
+.user{background-color:lightgray;border-color:black;
+background:none;}
+.user:hover{border-bottom:5px solid gray}
+.password:hover{border-bottom:5px solid gray}
+
+.password{background-color:lightgray;border-color:black;background:none}
+</style>
+<body>
+<p id="n"> --:: HRC RESTAURANT ::-- 
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="aboutus.html">About us</a>
+<a href="menu.html">Menu</a>
+<a href="gallery.html">Gallery</a>
+<a href="reservation.html">Reservation</a>
+<a href="location.html">Location</a>
+</nav>
+</p><br/><br/>
+<div class="login">
+
+<script>
+	function create()
+        {
+            var a=document.validate.first.value;
+            var b=document.validate.last.value;
+            var c=document.validate.password.value;
+            var d=document.validate.email.value;
+            var e=document.validate.phone.value;
+
+            if(a==null ||a=="")
+            {
+              alert("first name cannnot be blank" );
+              return false;
+            }
+            if(b==null || b=="")
+            {
+              alert("last name cannnot be blank" );
+              return false;
+            }
+            if(c==null || c=="")
+            {
+              alert("password cannnot be blank" );
+              return false;
+            }
+	
+		 if(c.length<8)
+            {
+              alert("password cannnot be less than 8" );
+              return false;
+            }
+		 if(d==null || d=="")
+            {
+              alert("email name cannnot be blank" );
+              return false;
+            }
+		 if(e==null || e=="")
+            {
+              alert("phone number cannnot be blank" );
+              return false;
+            }
+			if(true){window.location.href="submit3.html"}
+
+        }
+</script>
+
+<form method="post" name="validate" onsubmit="return create()" action="hrc.js">
+<fieldset class="field">
+<legend id="l">CREATE ACCOUNT </legend><br/>
+
+<label id="u" for="first"> FIRST NAME:&nbsp </label><BR/><BR/>
+<input type="text" class="user" id="first" name="first" placeholder="     enter first name" ><br/><br/>
+
+<label id="u" for="last"> LAST NAME:&nbsp </label><BR/><BR/>
+<input type="text" class="user" id="last" name="last" placeholder="     enter last name"  ><br/><br/>
+
+<label id="p" for="password"> PASSWORD:&nbsp  </label><BR/><BR/>
+<input type="password" class="password"  id="password" name="password" placeholder="     enter user password" ><br/><br/>
+
+<label id="u" for="email"> E-MAIL ADDRESS:&nbsp </label><BR/><BR/>
+<input type="email" class="user" id="email" name="email"  placeholder="     enter e-mail id"  ><br/><br/>
+
+<label id="u" for="phone"> PHONE NUMBER:&nbsp </label><BR/><BR/>
+<input type="tel" class="user" id="phone" name="phone" placeholder="     enter phone number"  ><br/><br/>
+
+<center><br/>
+
+<input type="button" class="submit"  value="sign-up" onclick="create()"></center>
+<h2>if you have account <a href="loginhrc.html" id="a">&nbsp&nbsp&nbspLOGIN NOW&nbsp&nbsp&nbsp</a> here</h2>
+</fieldset>
+</form>
+</div>
+</body>
+</html>

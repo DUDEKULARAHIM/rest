@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+<title> login-in </title>
+<style>
+body{background-image:url("menu192.jpg")}
+.field{ border-radius:20px;width:auto;height:auto;background-color:none;padding:20px 120px 20px}
+#l{color:red;font-size:45px;}
+
+.login{margin-left:auto;
+margin-right:auto;
+margin-top:50px;
+margin-bottom:10px;}
+
+.user{ width:325px;
+height:40px;border-radius:10px;
+background-color:lightgray;
+background:none}
+
+.password{width:325px;
+height:40px;border-radius:10px;background-color:lightgray;
+background:none}
+#u{font-size:40px}
+#p{font-size:40px}
+.submit{width:140px ;height:50px;border-radius:15px;background-color:cadetblue;color:black;font-size:22px}
+.imd{display:flex}
+input.us{background-color:lightgray}
+.submit:hover{color:red}
+.ad{border-radius:25px}
+#m{text-decoration:none}
+#m:hover{color:red}
+#n{font-size:80px;font-family:algerian;text-align:center;margin-bottom: -10px;}
+.login:hover{background-color:none;transparant:20px}
+nav{display:flex;background-color:none;margin-left:30%}
+nav a{text-decoration:none;padding:10px 25px;color:black}
+nav a:hover{background-color:cadetblue}
+.user:hover{border-bottom:5px solid gray}
+.password:hover{border-bottom:5px solid gray}
+
+</style>
+</head>
+<body>
+<p id="n"> --:: HRC RESTAURANT ::-- </p>
+<nav class="nav">
+<a href="index.html">Home</a>
+<a href="aboutus.html">About us</a>
+<a href="menu.html">Menu</a>
+<a href="gallery.html">Gallery</a>
+<a href="reservation.html">Reservation</a>
+<a href="location.html">Location</a>
+</nav>
+
+<h1><center id="h">LOG-IN PAGE FOR RESERVATION</center></h1>
+<div class="imd">
+
+<div class="login">
+
+<script>
+        function validate()
+        {
+            var x=document.loginform.email.value;
+            var y=document.loginform.password.value;
+            if(x==null ||x=="")
+            {
+              alert("user name cannnot be blank" );
+              return false;
+            }
+             else if(y==null || y=="")
+            {
+              alert("password cannnot be blank" );
+              return false;
+            }
+            else if(y.length<8)
+            {
+              alert("password cannnot be less than 8" );
+              return false;
+            }
+     			
+if(true){window.location.href="submit2.html"}
+        }
+    </script>
+
+
+<form method="post"  name="loginform"  onsubmit="return validate()" action="hrc.js">
+<fieldset class="field">
+<legend id="l">LOGIN </legend><br/>
+
+
+<label id="u" for="email"> User name:&nbsp </label><br/><br/>
+<input type="text" class="user" name="email" placeholder="      enter user name" id="email" ><br/><br/>
+<label id="p" for="password"> Password:&nbsp  </label><br/><br/>
+<input type="password" class="password" name="password" placeholder="      enter user password" id="password" ><br/><br/>
+
+
+<center><br/>
+<input type="button" class="submit" value="Log-in" onclick="validate()"></center>
+<p>if u dont have account <a href="createpage.html" id="m">&nbsp&nbsp&nbsp CREATE ACCOUNT&nbsp&nbsp&nbsp</a> here</p>
+</fieldset>
+</form>
+</div>
+<div>
+</div>
+</div>
+</body>
+</html>

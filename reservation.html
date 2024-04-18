@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Reservation</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background: lightsteelblue;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    height:30px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    height:50px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.nav-div{
+            margin:40px;
+            margin-top: 30px;
+            padding:20px;
+        }
+        nav{display:flex;background-color:none}
+nav a{
+    text-decoration:none;
+    padding:10px 25px;
+    font-size: 20px;
+    color:black
+}
+nav a:hover{
+    background-color:cadetblue;
+}
+
+
+.footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Footer grid layout */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* Column styles */
+        .footer-column {
+            padding: 10px;
+        }
+
+        /* Footer link styles */
+        .footer a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Footer links hover effect */
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+    </style>
+</head>
+<body>
+
+    <div class="nav-div">
+        <center>
+        <nav class="nav">
+            
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About us</a>
+            <a href="menu.html">Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="reservation.html" style="color:orange;">Reservation</a>
+            <a href="location.html">Location</a>
+            
+            </nav>
+        </center>
+    </div>
+
+    <div class="container">
+        <h1>Make a Reservation</h1>
+        <form id="reservationForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="comments">Phone Number:</label>
+            <input type="tel" id="phone" required>
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" required>
+            <label for="time">Preferred Time:</label>
+            <input type="time" id="time" required>
+          
+            <button type="submit" onclick="func()">Submit</button>
+        </form>
+    </div>
+
+<br><br>
+    <footer class="footer">
+        <div class="footer-grid">
+            <!-- Names column -->
+            <div class="footer-column">
+                <h4>Names</h4>
+                <a href="#">Chef John Doe</a>
+                <a href="#">Manager Jane Smith</a>
+                <a href="#">Waitstaff Amy Lee</a>
+            </div>
+            
+            <!-- Details column -->
+            <div class="footer-column">
+                <h4>Details</h4>
+                <p>Address: 123 Main Street, City, State, ZIP</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@yourrestaurant.com</p>
+            </div>
+
+            <!-- Timings column -->
+            <div class="footer-column">
+                <h4>Timings</h4>
+                <p>Mon - Fri: 9am - 10pm</p>
+                <p>Sat: 10am - 11pm</p>
+                <p>Sun: 10am - 9pm</p>
+            </div>
+            
+            <!-- Social media column -->
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <a href="https://facebook.com/yourrestaurant" target="_blank">Facebook</a>
+                <a href="https://twitter.com/yourrestaurant" target="_blank">Twitter</a>
+                <a href="https://instagram.com/yourrestaurant" target="_blank">Instagram</a>
+                <a href="https://linkedin.com/company/yourrestaurant" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        document.getElementById('reservationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    let name = document.getElementById('name').value;
+    let guests = document.getElementById('guests').value;
+    let time = document.getElementById('time').value;
+    let phone = document.getElementById('phone').value;
+    
+    alert(`Reservation Details:\nCheck details and click on button ::\n\nName: ${name}\nPhone number: ${phone}\nguests: ${guests}\nTime: ${time}`);
+    document.getElementById('reservationForm').reset();
+});
+
+function func(){
+    if(true){window.location.href="submit.html"}
+}
+    </script>
+</body>
+</html>

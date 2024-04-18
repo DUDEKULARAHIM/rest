@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Card</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <style>
+
+
+
+.cart {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart h3 {
+            margin: 0 0 10px;
+        }
+
+        .cart ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .cart li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .add-to-cart{
+            background-color:orangered;
+            color:white;
+            align-content: center;
+            padding:10px;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:lemonchiffon;
+        }
+
+        .menu {
+            /* max-width: 800px; */
+            margin: 20px auto;
+            background-color:palegoldenrod;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-row {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .menu-item {
+            flex: 1;
+            margin-right: 20px;
+            margin-left: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item:last-child {
+            margin-right: 0;
+        }
+
+        .menu-item img {
+            /* max-width: 100%; */
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .menu-item h3 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+        .menu-item p {
+            margin: 5px 0;
+        }
+        .nav-div{
+            margin:40px;
+            margin-top: 30px;
+            padding:20px;
+        }
+        nav{display:flex;background-color:none}
+nav a{text-decoration:none;padding:10px 25px;font-size: 20px;color:black}
+nav a:hover{background-color:cadetblue}
+
+
+.footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Footer grid layout */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        /* Column styles */
+        .footer-column {
+            padding: 10px;
+        }
+
+        /* Footer link styles */
+        .footer a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Footer links hover effect */
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+
+
+
+    </style>
+</head>
+<body>
+    <div class="nav-div">
+        <center>
+        <nav class="nav">
+            
+            <a href="index.html">Home</a>
+            <a href="aboutus.html">About us</a>
+            <a href="menu.html" style="color:orange;">Menu</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="location.html">Location</a>
+            <a href="#" id="addCartButton">Add to Cart</a>
+
+            </nav>
+        </center>
+    </div>
+    <div class="menu">
+        <div class="menu-row">
+            <div class="menu-item">
+                <img src="bp.jpg" alt="Item 1" width="340px" height="200px">
+                <h2> Chicken Biryani</h2>
+                <h3>Price: $130</h3><br>
+               <center> <button class="add-to-cart" data-item="Chicken Biryani" data-price="130" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button></center>
+            </div>
+            <div class="menu-item">
+                <img src="mbp.jpg" alt="Item 1" width="340px" height="200px">
+                <h2>Mutton Biryani</h2>
+                <h3>Price: $180</h3><br>
+                <center><button class="add-to-cart" data-item="Mutton Biryani" data-price="180" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button></center>
+
+            </div>
+            <div class="menu-item">
+                <img src="ccp.jpg" alt="Item 1" width="340px" height="200px">
+                <h2>Chicken Curry</h2>
+                <h3>Price: $80</h3><br>
+                <center><button class="add-to-cart" data-item="Chicken Curry" data-price="80" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button>
+
+</center>            </div>
+            <div class="menu-item">
+                <img src="menu13.webp" alt="Item 1" width="340px" height="200px">
+                <h2>Fish Fry</h2>
+                <h3>Price: $120</h3><br>
+                <center><button class="add-to-cart" data-item="Fish Fry" data-price="120" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button> </center>    
+                </div>
+        </div>
+        <div class="menu-row">
+            <div class="menu-item">
+                <img src="dcp.jpg" alt="Item 1" width="340px" height="200px">
+                <h2>Dragon Chicken</h2>
+                <h3>Price: $100</h3><br>
+                <center><button class="add-to-cart" data-item="Dragon Chicken" data-price="100" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button></center>
+
+            </div>
+            <div class="menu-item">
+                <img src="chilli.webp" alt="Item 1" width="340px" height="200px">
+                <h2>Chilly Chicken</h2>
+                <h3>Price: $120</h3><br>
+                <center><button class="add-to-cart" data-item=" Chilly Chicken" data-price="120" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button</center>>
+
+            </div>
+            <div class="menu-item">
+                <img src="drum.avif" alt="Item 1" width="340px" height="200px">
+                <h2>Chicken DrumSticks</h2>
+                <h3>Price: $110</h3><br>
+                <center><button class="add-to-cart" data-item="Chicken DrumStick" data-price="110" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</butt</center>on>
+
+            </div>
+            <div class="menu-item">
+                <img src="65.JPG" alt="Item 1" width="340px" height="200px">
+                <h2>Chicken 65</h2>
+                <h3>Price: $100</h3><br>
+                <center><button class="add-to-cart" data-item="Chicken 65" data-price="100" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button>
+
+  </center>          </div>
+        </div>
+        <div class="menu-row">
+            <div class="menu-item">
+                <img src="frp.jpg" alt="Item 1" width="340px" height="200px">
+                <h2>Fried Rice</h2>
+                <h3>Price: $70</h3><br>
+                <center><button class="add-to-cart" data-item="Fried Rice" data-price="70" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button>
+
+   </center>         </div>
+            <div class="menu-item">
+                <img src="ecp.jpeg" alt="Item 1" width="340px" height="200px">
+                <h2>Egg Curry</h2>
+                <h3>Price: $90</h3><br>
+                <center><button class="add-to-cart" data-item="Egg Curry" data-price="90" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button>
+
+    </center>        </div>
+            <div class="menu-item">
+                <img src="ptp.avif" alt="Item 1" width="340px" height="200px">
+                <h2>Paneer Tikka</h2>
+                <h3>Price: $60</h3><br>
+                <center><button class="add-to-cart" data-item="Paneer Tikka" data-price="60" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button>
+
+ </center>           </div>
+            <div class="menu-item">
+                <img src="atp.jpg" alt="Item 1" width="340px" height="200px">
+                <h2>Aloo Tikka</h2>
+                <h3>Price: $50</h3><br>
+                <center><button class="add-to-cart" data-item="Aloo Tikka" data-price="50" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button>
+
+   </center>         </div>
+        </div>
+        <div class="menu-row">
+            <div class="menu-item">
+                <img src="vtp.jpg" alt="Item 1" width="340px" height="200px">
+                <h2>Veg Thalli</h2>
+                <h3>Price: $110</h3><br>
+                <center><button class="add-to-cart" data-item="Veg Thalli" data-price="110" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button>
+
+  </center>          </div>
+            <div class="menu-item">
+                <img src="fries.png" alt="Item 1" width="340px" height="200px">
+                <h2>French Fries</h2>
+                <h3>Price: $60</h3><br>
+                <center><button class="add-to-cart" data-item="French Fries" data-price="60" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button>
+
+ </center>           </div>
+            <div class="menu-item">
+                <img src="spp.jpg" alt="Item 1" width="340px" height="200px">
+                <h2>Spring Roll</h2>
+                <h3>Price: $80</h3><br>
+                <center><button class="add-to-cart" data-item="Spring Roll" data-price="80" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button>
+
+  </center>          </div>
+            <div class="menu-item">
+                <img src="np.jpeg" alt="Item 1" width="340px" height="200px">
+                <h2>Noodles</h2>
+                <h3>Price: $80</h3><br>
+                <center><button class="add-to-cart" data-item="Noodles" data-price="80" style="padding:10px;">   <i class="fas fa-shopping-cart"   style="margin-right: 8px;"></i>        Add to Cart</button>
+
+      </center>      </div>
+        </div>
+    </div>
+<br><br>
+
+<div class="cart">
+    <h3>Cart Item lists :</h3>
+    <ul id="cartList" ><br></ul>
+</div><br>
+
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <!-- Names column -->
+            <div class="footer-column">
+                <h4>Names</h4>
+                <a href="#">Chef John Doe</a>
+                <a href="#">Manager Jane Smith</a>
+                <a href="#">Waitstaff Amy Lee</a>
+            </div>
+            
+            <!-- Details column -->
+            <div class="footer-column">
+                <h4>Details</h4>
+                <p>Address: 123 Main Street, City, State, ZIP</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>Email: info@yourrestaurant.com</p>
+            </div>
+
+            <!-- Timings column -->
+            <div class="footer-column">
+                <h4>Timings</h4>
+                <p>Mon - Fri: 9am - 10pm</p>
+                <p>Sat: 10am - 11pm</p>
+                <p>Sun: 10am - 9pm</p>
+            </div>
+            
+            <!-- Social media column -->
+            <div class="footer-column">
+                <h4>Follow Us</h4>
+                <a href="https://facebook.com/yourrestaurant" target="_blank">Facebook</a>
+                <a href="https://twitter.com/yourrestaurant" target="_blank">Twitter</a>
+                <a href="https://instagram.com/yourrestaurant" target="_blank">Instagram</a>
+                <a href="https://linkedin.com/company/yourrestaurant" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+
+    
+
+    <!-- JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Initialize an empty array for the cart
+            let cart = [];
+
+            // Handle click events on "Add to Cart" buttons
+            $('.add-to-cart').on('click', function() {
+                const item = $(this).data('item');
+                const price = $(this).data('price');
+
+                // Add the item to the cart array
+                cart.push({ item, price });
+
+                // Update the cart list in the HTML
+                updateCart();
+            });
+
+            // Function to update the cart list in the HTML
+            function updateCart() {
+                // Get the cart list element
+                const cartList = $('#cartList');
+                
+                // Clear the cart list
+                cartList.empty();
+
+                // Add each item in the cart to the list
+                cart.forEach(cartItem => {
+                    cartList.append(`
+                        <li>${cartItem.item} - $${cartItem.price}</li>
+                    `);
+                });
+            }
+
+            // Handle click events on "Add to Cart" button in the navigation bar
+            $('#addCartButton').on('click', function() {
+                alert('Items in the cart:\n ' + cart.map(item => `${item.item} - $${item.price}`).join('\n '));
+                if(true){window.location.href="reservation.html"}
+
+            });
+        });
+
+
+ 
+    </script>
+
+
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,118 @@
+<!-- <!doctype html>
+<html>
+<head>
+<title> online reservation </title>
+<style>
+.button{
+         
+  
+   padding:20px 30px;
+background-color:black;
+border-radius:20px;
+
+}
+.link{font-size:25px;
+      text-decoration:none;
+      color:red;
+      
+      } 
+#u{background-image:url("bgimg14231.jpg")}
+#u{border-radius:100px}
+
+</style>
+</head>
+<body><div id="u">
+<br/>
+
+<center>
+<p  style="font-size:42px;font-family:algerian;color:red"> ----:: HRC restaurant ::---- <p>
+<br/><br/><br/><br/><br/>
+
+<p style="font-size:38px;font-family:veranda"> your reservation is successfully completed </p>
+
+<br/><br/><br/>
+<h2> Click Here TO Go Home</h2>
+<button class="button"><a href="index.html" class="link">HOME</a></button><br/>
+<p> go back to home page </p>
+<br/><br/>
+<br/><br/>
+<br/><br/>
+<br/>
+
+
+
+</div>
+</center>
+</body>
+</html> -->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Loader</title>
+  <style>
+      .button{
+         
+  
+         padding:20px 30px;
+      background-color:black;
+      border-radius:20px;
+      
+      }
+      .link{font-size:25px;
+            text-decoration:none;
+            color:red;
+            
+            } 
+      #u{background-image:url("bgimg14231.jpg")}
+      #u{border-radius:100px}
+
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    
+    #numbers {
+      font-size: 200px; /* Increase font size for numbers */
+      margin-top: 20%;
+    }
+
+    #numbers.small {
+      font-size: 40px; /* Decrease font size for the final message */
+    }
+  </style>
+</head>
+<body id="u">
+  <div id="numbers"></div>
+  <button class="button"><a href="index.html" class="link">HOME</a></button><br/>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      let numbersDiv = document.getElementById("numbers");
+      let num = 4;
+      
+      function displayNumber() {
+        if (num >= 1) {
+          numbersDiv.textContent = num;
+          num--;
+          setTimeout(displayNumber, 1000);
+        } else {
+          // Display a message when all numbers have been displayed
+          numbersDiv.innerHTML = "Reservation completed successfully<br><br>you can go to home page now<br><br>Thanking You";
+      //     numbersDiv.innerHTML = "<button class="button"><a href="index.html" class="link">HOME</a></button><br/>"
+         // numbersDiv.textContent = "now you can leave the site";
+          numbersDiv.classList.add("small"); // Apply small class for smaller text
+        }
+      }
+      
+      displayNumber();
+    });
+  </script>
+</body>
+</html>
